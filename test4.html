@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Process Scheduling Simulator</title>
+<link rel="stylesheet" href="test4.css">
+</head>
+<body>
+<div class="container">
+  <h1>Process Scheduling Simulator</h1>
+  
+  <div class="card">
+    <div class="table-container">
+      <table id="processTable">
+        <thead>
+          <tr>
+            <th>Process ID</th>
+            <th>Arrival Time</th>
+            <th>Burst Time</th>
+            <th>Priority</th>
+          </tr>
+        </thead>
+        <tbody>
+        </tbody>
+        <tfoot>
+          <tr>
+            <td><input type="text" id="processId" placeholder="Process ID"></td>
+            <td><input type="number" id="arrivalTime" placeholder="Arrival Time"></td>
+            <td><input type="number" id="burstTime" placeholder="Burst Time"></td>
+            <td><input type="number" id="priority" placeholder="Priority"></td>
+          </tr>
+        </tfoot>
+      </table>
+    </div>
+
+    <div class="btn-container">
+      <button class="btn btn-add" onclick="addProcess()">Add Process</button>
+      <button class="btn btn-random" onclick="generateSingleProcess()">Random Process</button>
+      <div class="delete-container">
+        <select id="processToDelete">
+          <option value="">Select process to delete</option>
+        </select>
+        <button class="btn btn-delete" onclick="deleteProcess()">Delete Process</button>
+      </div>
+      <button class="btn btn-reset" onclick="reset()">Reset</button>
+      <button class="btn btn-run" onclick="runSimulation()">Run</button>
+    </div>
+  </div>
+
+  <div class="results">
+    <h2>Simulation Results</h2>
+
+    <!-- FCFS Algorithm Results -->
+    <div class="algorithm-container">
+      <div class="algorithm-header">FCFS (First Come First Serve)</div>
+      <div class="gantt-chart" id="fcfsGantt"></div>
+      <div class="table-container">
+        <table id="fcfsResultsTable">
+          <thead>
+            <tr>
+              <th>Process ID</th>
+              <th>Arrival Time</th>
+              <th>Burst Time</th>
+              <th>Priority</th>
+              <th>Completion Time</th>
+              <th>Waiting Time</th>
+              <th>Turnaround Time</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+      <div class="average-times" id="fcfsAverageTimes"></div>
+    </div>
+
+    <!-- RR Algorithm Results -->
+    <div class="algorithm-container">
+      <div class="algorithm-header">RR (Round Robin)</div>
+      <div class="gantt-chart" id="rrGantt"></div>
+      <div class="table-container">
+        <table id="rrResultsTable">
+          <thead>
+            <tr>
+              <th>Process ID</th>
+              <th>Arrival Time</th>
+              <th>Burst Time</th>
+              <th>Priority</th>
+              <th>Completion Time</th>
+              <th>Waiting Time</th>
+              <th>Turnaround Time</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+      <div class="average-times" id="rrAverageTimes"></div>
+    </div>
+  </div>
+</div>
+
+<script src="test4.js"></script>
+</body>
+</html>

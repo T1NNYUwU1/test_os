@@ -1,0 +1,163 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #1e1e2f;
+    color: #e0e0e0;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+h1 {
+    text-align: center;
+    color: #e0e0e0;
+    margin-bottom: 30px;
+}
+
+.card {
+    background: #282838;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.table-container {
+    overflow-x: auto;
+    margin-bottom: 20px;
+}
+
+table {
+    width: 100%;
+    border: 1px solid #404050;
+    border-collapse: collapse;
+    border-spacing: 0;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+th,
+td {
+    padding: 12px;
+    text-align: center;
+    border-bottom: 1px solid #404050;
+}
+
+th {
+    background-color: #323242;
+    font-weight: bold;
+}
+
+input,
+select {
+    background: #404050;
+    border: none;
+    padding: 8px;
+    border-radius: 4px;
+    color: #e0e0e0;
+    margin-right: 10px;
+}
+
+input {
+    width: 120px;
+}
+
+select {
+    width: 155px;
+}
+
+.btn-container {
+    display: flex;
+    gap: 10px;
+    margin: 20px 0;
+    align-items: center;
+}
+
+.btn {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    color: #e0e0e0;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.btn-add {
+    background-color: #4CAF50;
+}
+
+.btn-random {
+    background-color: #2196F3;
+}
+
+.btn-delete {
+    background-color: #F44336;
+}
+
+.btn-run {
+    background-color: #9C27B0;
+}
+
+.btn-reset {
+    background-color: #607D8B;
+}
+
+.delete-container {
+    display: flex;
+    align-items: center;
+}
+
+.results {
+    margin-top: 30px;
+}
+
+.algorithm {
+    background: #323242;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.algorithm-header {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #e0e0e0;
+}
+
+.algorithm-container {
+    border: 1px solid #404050;
+    border-radius: 6px;
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+.gantt-chart {
+    margin: 10px 0;
+    display: flex;
+    overflow-x: auto;
+}
+
+.gantt-block {
+    padding: 10px;
+    text-align: center;
+    min-width: 50px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    margin-right: 2px;
+    font-weight: bold;
+}
+
+.gantt-block:last-child {
+    border-right: none;
+}
+
+.average-times {
+    margin-top: 10px;
+    font-weight: bold;
+}
